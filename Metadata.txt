@@ -1,0 +1,51 @@
+Metadata-Field Validation Geopackage
+ 
+In the geopackage, there are 3 spatial tables:
+1.      field_stations
+2.     state_mesonet
+ 
+Field_stations: This is a collection of environmental field stations serving the Northeastern
+United States. For each site, we included the name, address, website, and details on data collected if available.
+Table field information:
+1.     ID-a unique identification number for each field station
+2.     Name-Name of the field station
+3.     Address- Street address of field station, when available
+4.     Mesonet- Mesonet system this station belongs to, if applicable
+5.     Lat- Latitude, in decimal degrees
+6.     Long- Longitude, in decimal degrees
+7.     Website- website with field station data, if available
+8.     DataAccess- Identified what type of data is available (archival, real time, etc.)
+9.     DataAccessTier- Refers to timeframe of available data. Values include:
+	1 - Real time and historic data is available for download
+	2 - Real time data is available for download
+	3 - Historic data is available for download
+	4 - No data is available for download
+	0 - Unknown
+10.  DataCollectionTier- Refers to type of data collected. Values include:
+	1 - Abiotic data and/or biotic data collected at station
+	2 - Biotic data collected at station
+	3 - No data currently being collected at station
+11.  MetStation- Identifies sites with known meteorological station
+12.  DataUse- Identifies primary user of site data
+13.  Classification- type of organization that operates site
+14.  Publication- known publications that reference field stations
+15.  Notes- Additional information about site
+16.  Columns 16-49: Column represents a type of data collected. "TRUE" indicates the site measures that data, "NA" indicates that data is not collected.
+ 
+state_mesonet: A collection of areas with a mesonet. Each network is represented as a polygon of the Mesonet area. Included in the table are the name of the network, location, size, number of sensors, the network mission statement, and details on data collected.
+Table field information:
+1.     ID-a unique identification number for each meson
+2.     MesonetName-name of the meson
+3.     Location-State, city, or country that mesons covers
+4.     Size_km2- size of mesonet range
+5.     Number- amount of field stations
+6.     DataAvailability- How to access the data
+7.     DataAccessTier- Refers to timeframe of available data. Values include:
+	1 - Real time and historic data is available for download
+	2 - Real time data is available for download
+	3 - Historic data is available for download
+	4 - No data is available for download
+8.     PurposeStatement- Mission statement for the network
+9.     Columns 9-24: Represents type of data collected. When available, the sensor brand is listed. If sensor brand is not known but data is collected, the cell is marked with an 'x'. If the data is not collected, the cell is null.
+10.  Research Products-Identifies peer reviewed articles that discuss data products created with the mesonet data.
+ 
